@@ -1,0 +1,55 @@
+package com.first_Student_age_location;
+
+public class StudentDec {
+	
+	 int age;
+	 String location;
+	 
+	 public StudentDec(int age, String location) {
+			this.age = age;
+			this.location = location;
+			
+		}
+}
+
+package com.first_Student_age_location;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class StudentAgeLocation {
+	
+public static void main(String args[]) {
+	
+	    StudentDec sd1 = new StudentDec(20, "Nashik");
+	    StudentDec sd2 = new StudentDec(26, "Pune");
+	    StudentDec sd3 = new StudentDec(21, "Mumbai");
+	    StudentDec sd4 = new StudentDec(15, "Ahmednagar");
+	    StudentDec sd5 = new StudentDec(25, "Nashik");
+	    StudentDec sd6 = new StudentDec(26, "Sangamner");
+	    StudentDec sd7 = new StudentDec(20, "Nashik");
+
+		ArrayList<StudentDec> sd = new ArrayList<>();
+		sd.add(sd1);
+		sd.add(sd2);
+		sd.add(sd3);
+		sd.add(sd4);
+		sd.add(sd5);
+		sd.add(sd6);
+		sd.add(sd7);
+		
+		Iterator itr=sd.iterator();
+		while(itr.hasNext())
+		{
+			
+			Object obj = itr.next();
+            StudentDec sd8 = (StudentDec) obj;
+            System.out.println("Student Age is : " + sd8.age);
+            System.out.println("Student Location is : " + sd8.location);
+            System.out.println("-----------------------------------------");		
+		}
+		}
+	
+}
+
+
